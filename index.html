@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Neumorphic UI Components</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+	<div class="main">
+		<div class="details" id="d1">
+			<div class="creditCard" id="cCard">
+				<i class="fa fa-credit-card"></i>
+			</div>
+			<h5>CREDIT CARD</h5>
+		</div>
+		<div class="details giftDetail" id="d2">
+			<div class="giftCard">
+				<i class="fa fa-gift" ></i>
+			</div>
+			<h5>GIFT CARD</h5>
+		</div>
+		<div class="details" id="d3">
+			<div class="order">
+				<i class="fa fa-shopping-bag"></i>
+			</div>
+			<h5>ORDERS</h5>
+		</div>
+	</div>
+	
+	<div class="notification">
+		<p >Stay on top of your order status,deals,new messages and more. <span class="enable">Enable notifications</span></p>
+	</div>
+
+	<div class="btn">
+		<button class="btncon">Continue</button>
+		<button class="btncan">Cancel</button>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	let btn1=document.querySelector('#d1');
+	let btn2=document.querySelector('#d2');
+	let btn3=document.querySelector('#d3');
+
+	console.log(btn1);
+	console.log(btn2);
+	console.log(btn3);
+	
+
+	btn1.addEventListener('click', (event) =>{
+			btn1.classList.add('giftDetail');
+			btn2.classList.remove('giftDetail');
+			btn3.classList.remove('giftDetail');
+		});
+	btn2.addEventListener('click', (event) =>{
+			btn2.classList.add('giftDetail');
+			btn3.classList.remove('giftDetail');
+			btn1.classList.remove('giftDetail');
+		});
+	btn3.addEventListener('click', (event) =>{
+			btn3.classList.add('giftDetail');
+			btn1.classList.remove('giftDetail');
+			btn2.classList.remove('giftDetail');
+		});
+
+</script>
+</html>
